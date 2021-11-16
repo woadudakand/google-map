@@ -1,0 +1,176 @@
+#map {
+    height: 100%;
+  }
+  
+  /* Optional: Makes the sample page fill the window. */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #description {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  #infowindow-content .title {
+    font-weight: bold;
+  }
+  
+  #infowindow-content {
+    display: none;
+  }
+  
+  #map #infowindow-content {
+    display: inline;
+  }
+  
+  .pac-card {
+    background-color: #fff;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 0 0.5em;
+    font: 400 18px Roboto, Arial, sans-serif;
+    overflow: hidden;
+    font-family: Roboto;
+    padding: 0;
+  }
+  
+  #pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+  }
+  
+  .pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+  }
+  
+  .pac-controls label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+  }
+  
+  #pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+  }
+  
+  #pac-input:focus {
+    border-color: #4d90fe;
+  }
+  
+  #title {
+    color: #fff;
+    background-color: #4d90fe;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 6px 12px;
+  }
+  
+  .floating-panel {
+    width: 300px;
+    margin: 10px 15px;
+    background: #AADAFF;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+  }
+
+  .floating-panel article h4 {
+    margin: 0;
+    padding: 8px 0;
+  }
+
+  .floating-panel article select {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+  }
+
+  .floating-panel article select:focus-visible {
+    outline: none;
+  }
+
+  .floating-panel .inputs{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .floating-panel .inputs input {
+    width: 120px;
+    margin: 10px 0;
+    padding: 8px;
+  }
+
+  .floating-panel .inputs input:focus-visible {
+    outline: none;
+  }
+
+  .deliveryAddress {
+    padding: 12px;
+    background-color: #4EB5AD;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .details {
+    background-color: #DEEFD7;
+    padding: 15px;
+    color: green;
+  }
+
+  .popup {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -250px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    top: 15px;
+    display: none;
+  }
+  .popup .item {
+    width: 250px;
+    background-color: #fff;    
+    text-align: center;
+    line-height: 150%;
+    margin: 8px;
+  }
+
+  .popup .item h2 {
+    background: #4EB5AD;
+    margin: 0;
+    padding: 10px;
+    color: #ffffff;
+  }
+
+  .popup .item h3, .popup .item p{    
+    margin: 0; 
+    padding: 5px;   
+  }
+  
+  .popup .item button {
+    padding: 11px;
+    margin: 15px;
+    background: #EEC323;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+  }

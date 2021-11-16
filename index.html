@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Directions Service</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div class="floating-panel" id="floating-panel">
+      <article>
+          <h4>Pick-up address: </h4>
+          <select id="start">
+            <option value="chicago, il">Chicago</option>
+            <option value="st louis, mo">St Louis</option>
+            <option value="joplin, mo">Joplin, MO</option>
+            <option value="oklahoma city, ok">Oklahoma City</option>
+            <option value="amarillo, tx">Amarillo</option>
+            <option value="gallup, nm">Gallup, NM</option>
+            <option value="flagstaff, az">Flagstaff, AZ</option>
+            <option value="winona, az">Winona</option>
+            <option value="kingman, az">Kingman</option>
+            <option value="barstow, ca">Barstow</option>
+            <option value="san bernardino, ca">San Bernardino</option>
+            <option value="los angeles, ca">Los Angeles</option>
+          </select>
+      </article>
+      <article>
+          <h4>Delivery address: <span id="showDistance"></span></h4>
+          <select id="end">
+            <option value="chicago, il">Chicago</option>
+            <option value="st louis, mo">St Louis</option>
+            <option value="joplin, mo">Joplin, MO</option>
+            <option value="oklahoma city, ok">Oklahoma City</option>
+            <option value="amarillo, tx">Amarillo</option>
+            <option value="gallup, nm">Gallup, NM</option>
+            <option value="flagstaff, az">Flagstaff, AZ</option>
+            <option value="winona, az">Winona</option>
+            <option value="kingman, az">Kingman</option>
+            <option value="barstow, ca">Barstow</option>
+            <option value="san bernardino, ca">San Bernardino</option>
+            <option value="los angeles, ca">Los Angeles</option>
+          </select>
+      </article>
+      <div class="inputs">
+        <input type="text" placeholder="Receive Name" />
+        <input type="text" placeholder="Receive Phone" />      
+      </div>
+      <button class="deliveryAddress" type="button">+ Delivery address</button>
+
+      <p class="details">
+        Total distance <span id="totalDistance">0</span>, Estimate delivery time <span id="deliveryTime">0</sp>
+      </p>
+    </div>
+
+    <div class="popup">
+      <div class="item">
+        <h2>Urgent Delivery</h2>
+        <h3 id="u-balance">$0</h3>
+        <p>One time payment</p>
+        <p>It is a long established fact that a reader will be distracted by the readable.</p>
+        <button type="button">Pay and schedule</button>
+      </div>
+      <div class="item">
+        <h2>Weekly Delivery</h2>
+        <h3 id="w-balance">$0</h3>
+        <p>One time payment</p>
+        <p>It is a long established fact that a reader will be distracted by the readable.</p>
+        <button type="button">Pay and schedule</button>
+      </div>
+    </div>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly&channel=2"
+      async
+    ></script>
+  </body>
+</html>
